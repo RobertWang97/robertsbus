@@ -45,7 +45,7 @@ auditModule.controller('AuditCtrl', function($filter, $state, $scope, getData,
 auditModule.factory('getData', function($http, $q) {
 	return function() {
 		var defer = $q.defer();
-		$http.get(BustRestFullUrl + '/admin/audit/info')
+        $http.get(BusRestFullUrl + '/admin/audit/info')
 				.then(function(data) {
 					//            console.log(data);
 					defer.resolve(data);
@@ -63,7 +63,7 @@ auditModule.factory('AuditSubmit', function($http) {
 		userInfo : function(username, status, comments, approvedate) {
 			var req = {
 				method : 'POST',
-				url : BustRestFullUrl + '/admin/audit',
+                url: BusRestFullUrl + '/admin/audit',
 				headers: {					
 					'username' : localStorage.username					
 				},
