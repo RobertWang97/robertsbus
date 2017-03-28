@@ -54,7 +54,7 @@ statisticsModule.factory('getDataStat', function ($http, $q) {
     return function (DateFrom, DateTo) {
         var defer = $q.defer();
        // var tt = $scope.start.datefrom;
-        $http.get(BustRestFullUrl + '/admin/statistics?from=' + DateFrom + '&to=' + DateTo)
+        $http.get(BusRestFullUrl + '/admin/statistics?from=' + DateFrom + '&to=' + DateTo)
             .then(function (data) {
                 //            console.log(data);
                 defer.resolve(data);

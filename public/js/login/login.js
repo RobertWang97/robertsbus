@@ -43,7 +43,7 @@ loginModule.factory('LogIn', function($http) {
 		authenticate: function(username,password){
 			var req = {
 					 method: 'POST',
-					 url: BustRestFullUrl + '/login',
+                     url: BusRestFullUrl + '/login',
 					 headers: {
 					   'client_id': '94c105cc-f74b-4909-822d-54f6c7b6c9c9',
 					   'username' : username,
